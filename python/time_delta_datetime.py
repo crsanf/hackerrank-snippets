@@ -1,10 +1,5 @@
 #!/bin/python3
-
 import math
-import os
-import random
-import re
-import sys
 from datetime import datetime
 
 # Complete the time_delta function below.
@@ -13,7 +8,7 @@ def time_delta(t1, t2):
     datetime_t2 = parse_datetime_string(t2)
     delta = datetime_t1 - datetime_t2
     total_seconds = (delta.days * 24 * 60 * 60) + delta.seconds
-    print(total_seconds)
+    return int(math.fabs(total_seconds))
 
 def parse_datetime_string(datetime_string):
     datetime_split = datetime_string.split(' ')
